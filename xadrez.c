@@ -17,16 +17,41 @@ int main() {
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    int i = 0;
+    char *direcoes[] = {"Esquerda", "Direita", "Cima", "Baixo"};
+//Movimento da rainha    
+    printf("Movimento da RAINHA:\n");
+    for (int i = 0; i < 8; i++) {
+        printf("(%s) - ", direcoes[0]);
+    }
+    printf("\nMovimento extra da RAINHA: Todas as direcoes\n");
+    for (int i = 0; i < 8; i++) {
+        printf("(%s) - ", direcoes[i%4]);
+    }
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    printf("\n\n-------------------------------------\n");
+   
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+//Movimento do bisbo
+    printf("Movimento da BISBO:\n");
+    while (i < 5)
+    {
+        printf("(%s,%s) - ", direcoes[2], direcoes[0]);
+        ++i;
+    }
+    printf("\n\n-------------------------------------\n");
+
+//Zerando o contador
+    i = 0;
+
+//Movimento do torre
+    printf("Movimento da TORRE:\n");
+    do
+    {
+        ++i;
+        printf("(%s) - ", direcoes[1]);
+        
+    }while (i < 5);
 
     return 0;
 }
